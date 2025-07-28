@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Curricular Medicina UV</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Curricular Medicina UV</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Malla Curricular Medicina UV</h1>
+  <h1>Malla Curricular Medicina UV</h1>
+  <p>Haz clic en una materia para marcarla como completada y desbloquear sus dependencias.</p>
 
-    <div class="filtros">
-        <label for="semestreSelect"><b>Filtrar por semestre:</b></label>
-        <select id="semestreSelect">
-            <option value="todos">Todos los semestres</option>
-            <option value="1">1° semestre</option>
-            <option value="2">2° semestre</option>
-            <option value="3">3° semestre</option>
-            <option value="4">4° semestre</option>
-            <option value="5">5° semestre</option>
-            <option value="6">6° semestre</option>
-            <option value="7">7° semestre</option>
-            <option value="8">8° semestre</option>
-            <option value="9">9° semestre</option>
-            <option value="10">10° semestre</option>
-            <option value="11">11° semestre</option>
-            <option value="12">12° semestre</option>
-        </select>
+  <div id="tabla-malla"></div>
 
-        <label for="buscador"><b>Buscar materia:</b></label>
-        <input type="text" id="buscador" placeholder="Ejemplo: Anatomía">
-    </div>
-
-    <div id="malla" class="grid-malla"></div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
