@@ -38,7 +38,7 @@ h1 {
 
 #tabla-malla {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   gap: 15px;
 }
 
