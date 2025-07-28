@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 20px;
-  background: #f4f6f9;
+  background: #f7f9fc;
 }
 
 h1 {
@@ -9,41 +9,98 @@ h1 {
   color: #2c3e50;
 }
 
+#progreso {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#barra {
+  width: 100%;
+  height: 15px;
+  background: #dfe6e9;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+#barra-avance {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #81ecec, #74b9ff);
+  transition: width 0.5s ease;
+}
+
+.instrucciones {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
 #tabla-malla {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .columna {
   background: #ecf0f1;
   padding: 10px;
   border-radius: 8px;
+  min-width: 150px;
 }
 
 .columna h3 {
   text-align: center;
-  color: #34495e;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 .materia {
-  background: #bdc3c7;
+  background: #dfe6e9;
   margin: 8px 0;
   padding: 8px;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.85em;
   transition: background 0.3s ease;
+  position: relative;
 }
 
+.materia:hover { filter: brightness(1.1); }
+
 .materia.bloqueada {
-  background: #7f8c8d;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .materia.completada {
-  background: #27ae60 !important;
-  color: white;
+  background: #a3e4d7 !important;
+  color: #145a32;
+  font-weight: bold;
 }
+
+.materia .icono { margin-left: 5px; }
+
+.tooltip {
+  visibility: hidden;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  font-size: 0.8em;
+}
+.materia:hover .tooltip { visibility: visible; }
+
+.area-basica { background: #ffeaa7; }
+.area-disciplinaria { background: #fab1a0; }
+.area-terminal { background: #81ecec; }
+.area-optativa { background: #74b9ff; }
